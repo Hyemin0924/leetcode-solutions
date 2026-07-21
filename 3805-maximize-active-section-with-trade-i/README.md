@@ -1,3 +1,9 @@
+풀이: 
+문자열을 한 번 순회하면서 1로 바꿀수 있는 0의 개수를 계산하고, 각 구간에서 얻을 수 있는 최대 개수를 리스트에 저장한다. 마지막에 기존의 1의 개수와 가장 큰 구간의 길이를 더해 최댓값을 구한다.
+
+시간 복잡도: O(n)
+공간 복잡도: O(n)
+
 <h2><a href="https://leetcode.com/problems/maximize-active-section-with-trade-i">Maximize Active Section with Trade I</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given a binary string <code>s</code> of length <code>n</code>, where:</p>
 
 <ul>
