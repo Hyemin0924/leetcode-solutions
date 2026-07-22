@@ -1,5 +1,12 @@
 풀이 
-아이디어: 2차원 배열을 1차원 선형 구조로 펼쳐서(Flattening) $k$번 shift를 단순하게 계산합니다.모듈러 연산: $k$를 전체 원소 개수($N = m \times n$)로 나눈 나머지 rk = k % N를 구해 불필요한 회전을 없앱니다.1차원 변환: 2차원 grid를 순회하며 원소를 순서대로 1차원 리스트 g에 모아둡니다.인덱스 역추적: $k$번 shift 된 후의 위치 gn에 들어올 값은, shift 되기 전인 gn - rk 위치의 값입니다.음수 인덱스 처리: gn - rk < 0인 경우, 전체 개수 $N$을 더해 리스트 뒤쪽 원소를 가져옵니다 (원형 회전).결과 재구성: 1차원 인덱스 gn을 0부터 1씩 증가시키며 행(List<Integer>) 단위로 끊어 최종 2차원 리스트를 완성합니다.시간 복잡도: $\mathcal{O}(m \times n)$ — 원소를 정확히 2번씩만 순회하므로 최적의 속도를 가집니다.공간 복잡도: $\mathcal{O}(m \times n)$ — 1차원 리스트 g 생성을 위한 추가 메모리를 사용합니다.
+아이디어: 2차원 배열을 1차원 선형 구조로 펼쳐서(Flattening) $k$번 shift를 단순하게 계산합니다.
+모듈러 연산: $k$를 전체 원소 개수($N = m \times n$)로 나눈 나머지 rk = k % N를 구해 불필요한 회전을 없앱니다.
+1차원 변환: 2차원 grid를 순회하며 원소를 순서대로 1차원 리스트 g에 모아둡니다.
+인덱스 역추적: $k$번 shift 된 후의 위치 gn에 들어올 값은, shift 되기 전인 gn - rk 위치의 값입니다.
+음수 인덱스 처리: gn - rk < 0인 경우, 전체 개수 $N$을 더해 리스트 뒤쪽 원소를 가져옵니다 (원형 회전).
+결과 재구성: 1차원 인덱스 gn을 0부터 1씩 증가시키며 행(List<Integer>) 단위로 끊어 최종 2차원 리스트를 완성합니다.
+시간 복잡도: $\mathcal{O}(m \times n)$ — 원소를 정확히 2번씩만 순회하므로 최적의 속도를 가집니다.
+공간 복잡도: $\mathcal{O}(m \times n)$ — 1차원 리스트 g 생성을 위한 추가 메모리를 사용합니다.
 
 <h2><a href="https://leetcode.com/problems/shift-2d-grid">Shift 2D Grid</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Given a 2D <code>grid</code> of size <code>m x n</code>&nbsp;and an integer <code>k</code>. You need to shift the <code>grid</code>&nbsp;<code>k</code> times.</p>
 
